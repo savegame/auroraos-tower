@@ -39,39 +39,10 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 
-Page {
-    id: urlPage
-    objectName: "urlPage"
-    allowedOrientations: Orientation.All
+ApplicationWindow {
+    id: applicationWindow
 
-    property string urlString: ""
-
-    signal urlChanged(var url)
-
-    SilicaFlickable {
-        id: urlPageFlickable
-        objectName: "urlPageFlickable"
-        anchors.fill: parent
-
-        Column {
-            id: column
-            width: parent.width
-
-            PageHeader {
-                title: qsTr("Url")
-            }
-
-            TextField {
-                id: urlField
-                objectName: "urlField"
-                width: parent.width
-                text: urlString
-                EnterKey.onClicked: {
-                    var name = urlField.text;
-                    urlChanged(name);
-                    pageStack.pop();
-                }
-            }
-        }
-    }
+    initialPage: Qt.resolvedUrl("pages/MainPage.qml")
+    cover: Qt.resolvedUrl("cover/DefaultCoverPage.qml")
+    allowedOrientations: defaultAllowedOrientations
 }

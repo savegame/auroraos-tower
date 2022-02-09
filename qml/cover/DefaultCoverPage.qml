@@ -3,7 +3,7 @@
 ** Copyright (C) 2022 Open Mobile Platform LLC.
 ** Contact: https://community.omprussia.ru/open-source
 **
-** This file is part of the tinybrowser project.
+** This file is part of the TinyBrowser project.
 **
 ** $QT_BEGIN_LICENSE:BSD$
 **
@@ -44,9 +44,9 @@ CoverBackground {
 
     CoverBackground {
         CoverPlaceholder {
-            text: qsTr("tinybrowser")
+            text: qsTr("TinyBrowser")
             forceFit: true
-            icon.source: Qt.resolvedUrl("../images/tinybrowser.svg")
+            icon.source: Qt.resolvedUrl("../images/TinyBrowser.svg")
         }
     }
 }

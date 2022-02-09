@@ -3,7 +3,7 @@
 ** Copyright (C) 2022 Open Mobile Platform LLC.
 ** Contact: https://community.omprussia.ru/open-source
 **
-** This file is part of the tinybrowser project.
+** This file is part of the TinyBrowser project.
 **
 ** $QT_BEGIN_LICENSE:BSD$
 **
@@ -41,11 +41,11 @@
 int main(int argc, char *argv[])
 {
     QCoreApplication::setOrganizationName("ru.omp");
-    QCoreApplication::setApplicationName("tinybrowser");
+    QCoreApplication::setApplicationName("TinyBrowser");
 
     QGuiApplication *app = SailfishApp::application(argc, argv);
     QTranslator translator;
-    translator.load(QLocale::system(), QStringLiteral("ru.omp.tinybrowser"), QStringLiteral("-"), QStringLiteral("/usr/share/ru.omp.tinybrowser/translations"));
+    translator.load(QLocale::system(), QStringLiteral("ru.omp.TinyBrowser"), QStringLiteral("-"), QStringLiteral("/usr/share/ru.omp.TinyBrowser/translations"));
     app->installTranslator(&translator);
 
     QQuickView *view = new QQuickView;
