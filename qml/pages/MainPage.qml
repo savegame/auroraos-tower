@@ -71,6 +71,10 @@ Page {
             objectName: "webView"
             anchors.fill: parent
             url: "http://www.youtube.com"
+
+            Component.onCompleted: {
+                PermissionManager.instance()
+            }
         }
     }
 }
