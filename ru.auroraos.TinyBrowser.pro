@@ -32,7 +32,7 @@
 ##
 #############################################################################
 
-TARGET = ru.omp.TinyBrowser
+TARGET = ru.auroraos.TinyBrowser
 
 CONFIG += link_pkgconfig
 CONFIG += sailfishapp
@@ -45,11 +45,11 @@ DISTFILES += \
     qml/images/TinyBrowser.svg \
     qml/pages/MainPage.qml \
     qml/pages/UrlPage.qml \
-    qml/ru.omp.TinyBrowser.qml \
-    rpm/ru.omp.TinyBrowser.spec \
-    rpm/ru.omp.TinyBrowser.yaml \
+    qml/ru.auroraos.TinyBrowser.qml \
+    rpm/ru.auroraos.TinyBrowser.spec \
+    rpm/ru.auroraos.TinyBrowser.yaml \
     translations/*.ts \
-    ru.omp.TinyBrowser.desktop \
+    ru.auroraos.TinyBrowser.desktop \
     LICENSE.BSD-3-Clause.md \
     README.md
 
@@ -58,5 +58,5 @@ SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 CONFIG += sailfishapp_i18n
 
 TRANSLATIONS += \
-    translations/ru.omp.TinyBrowser.ts \
-    translations/ru.omp.TinyBrowser-ru.ts
+    translations/ru.auroraos.TinyBrowser.ts \
+    translations/ru.auroraos.TinyBrowser-ru.ts

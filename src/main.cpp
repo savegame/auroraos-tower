@@ -40,12 +40,12 @@
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication::setOrganizationName("ru.omp");
+    QCoreApplication::setOrganizationName("ru.auroraos");
     QCoreApplication::setApplicationName("TinyBrowser");
 
     QGuiApplication *app = SailfishApp::application(argc, argv);
     QTranslator translator;
-    translator.load(QLocale::system(), QStringLiteral("ru.omp.TinyBrowser"), QStringLiteral("-"), QStringLiteral("/usr/share/ru.omp.TinyBrowser/translations"));
+    translator.load(QLocale::system(), QStringLiteral("ru.auroraos.TinyBrowser"), QStringLiteral("-"), QStringLiteral("/usr/share/ru.auroraos.TinyBrowser/translations"));
     app->installTranslator(&translator);
 
     QQuickView *view = new QQuickView;

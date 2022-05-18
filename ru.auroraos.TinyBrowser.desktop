@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=Application
 X-Nemo-Application-Type=silica-qt5
-Icon=ru.omp.TinyBrowser
-Exec=/usr/bin/ru.omp.TinyBrowser
+Icon=ru.auroraos.TinyBrowser
+Exec=/usr/bin/ru.auroraos.TinyBrowser
 Name=TinyBrowser
 Name[ru]=TinyBrowser
 
 [X-Sailjail]
 Permissions=WebView;Audio;Location;Internet;UserDirs;RemovableMedia;MediaIndexing
-OrganizationName=ru.omp
+OrganizationName=ru.auroraos
 ApplicationName=TinyBrowser
