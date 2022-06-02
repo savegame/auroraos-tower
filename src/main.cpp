@@ -38,6 +38,12 @@
 
 #include <sailfishapp.h>
 
+#include <QCoreApplication>
+#include <QGuiApplication>
+#include <QLocale>
+#include <QQuickView>
+#include <QTranslator>
+
 int main(int argc, char *argv[])
 {
     QCoreApplication::setOrganizationName("ru.auroraos");
