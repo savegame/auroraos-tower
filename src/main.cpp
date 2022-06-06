@@ -50,9 +50,6 @@ int main(int argc, char *argv[])
     QCoreApplication::setApplicationName("TinyBrowser");
 
     QGuiApplication *app = SailfishApp::application(argc, argv);
-    QTranslator translator;
-    translator.load(QLocale::system(), QStringLiteral("ru.auroraos.TinyBrowser"), QStringLiteral("-"), QStringLiteral("/usr/share/ru.auroraos.TinyBrowser/translations"));
-    app->installTranslator(&translator);
 
     QQuickView *view = new QQuickView;
     view->setSource(SailfishApp::pathToMainQml());

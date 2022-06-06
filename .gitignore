@@ -6,4 +6,4 @@ translations/*.qm
 *.o
 *.pro.user*
 Makefile
-ru.omp.TinyBrowser
+ru.auroraos.TinyBrowser
