@@ -66,9 +66,9 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="108"/>
+        <location filename="../qml/pages/MainPage.qml" line="109"/>
         <source>URL</source>
-        <translation >URL</translation>
+        <translation>URL</translation>
     </message>
 </context>
 <context>
@@ -76,7 +76,7 @@
     <message>
         <location filename="../qml/ru.auroraos.TinyBrowser.qml" line="46"/>
         <source>Tiny Browser</source>
-        <translation >Tiny Browser</translation>
+        <translation>Tiny Browser</translation>
     </message>
 </context>
 </TS>

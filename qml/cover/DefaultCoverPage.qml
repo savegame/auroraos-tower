@@ -46,6 +46,6 @@ CoverBackground {
         objectName: "coverPlaceholder"
         text: appWindow.appName
         forceFit: true
-        icon.source: Qt.resolvedUrl("../images/TinyBrowser.svg")
+        icon.source: Qt.resolvedUrl("../images/ru.auroraos.TinyBrowser-transp.svg")
     }
 }

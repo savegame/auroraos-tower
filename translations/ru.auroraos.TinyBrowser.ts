@@ -64,14 +64,14 @@
     <name>MainPage</name>
     <message>
         <source>URL</source>
-        <translation >URL</translation>
+        <translation>URL</translation>
     </message>
 </context>
 <context>
     <name>ru.auroraos.TinyBrowser</name>
     <message>
         <source>Tiny Browser</source>
-        <translation >Tiny Browser</translation>
+        <translation>Tiny Browser</translation>
     </message>
 </context>
 </TS>

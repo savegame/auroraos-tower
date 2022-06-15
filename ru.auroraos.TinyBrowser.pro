@@ -35,6 +35,7 @@
 TARGET = ru.auroraos.TinyBrowser
 
 CONFIG += \
+    c++14 \
     link_pkgconfig \
     sailfishapp \
     sailfishapp_i18n
@@ -44,10 +45,11 @@ TRANSLATIONS += \
     translations/ru.auroraos.TinyBrowser-ru.ts
 
 SOURCES += \
-    src/main.cpp
+    src/ru.auroraos.TinyBrowser.cpp
 
 DISTFILES += \
-    qml/images/TinyBrowser.svg \
+    qml/images/ru.auroraos.TinyBrowser-red.svg \
+    qml/images/ru.auroraos.TinyBrowser-transp.svg \
     qml/cover/DefaultCoverPage.qml \
     qml/pages/MainPage.qml \
     qml/pages/AboutPage.qml \

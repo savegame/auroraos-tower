@@ -80,6 +80,7 @@ Page {
             objectName: "aboutButton"
             anchors {
                 left: parent.left
+                leftMargin: Theme.paddingMedium
                 verticalCenter: parent.verticalCenter
             }
             icon {
@@ -106,34 +107,17 @@ Page {
             focusOutBehavior: FocusBehavior.ClearPageFocus
             labelVisible: false
             placeholderText: qsTr("URL")
-            text: webView.url
             textLeftPadding: 0
-            textLeftMargin: 0
+            textLeftMargin: Theme.paddingMedium
             font {
                 pixelSize: Theme.fontSizeLarge
                 family: Theme.fontFamilyHeading
             }
-            rightItem: IconButton {
-                objectName: "searchButton"
-                icon.source: "image://theme/icon-m-search"
-                enabled: urlField.text.length > 0
-                opacity: enabled ? 1.0 : 0.0
+            EnterKey.iconSource: "image://theme/icon-m-search"
 
-                onClicked: webView.url = urlField.text;
-
-                Behavior on opacity {
-                    objectName: "behaviorOnOpacity"
-
-                    FadeAnimation {
-                        objectName: "fadeAnimation"
-                    }
-                }
-            }
-
-            onFocusChanged: {
-                if (focus) {
-                    cursorPosition = text.length;
-                }
+            EnterKey.onClicked: {
+                webView.url = text;
+                webView.focus = true;
             }
             Component.onCompleted: urlField.text = webView._initUrl
         }

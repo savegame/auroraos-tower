@@ -1,4 +1,4 @@
-# tinybrowser
+# Tiny Browser
 
 The project provides an example of using WebView.
 
