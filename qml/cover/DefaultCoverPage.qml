@@ -36,17 +36,16 @@
 **
 ****************************************************************************/
 
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 
 CoverBackground {
-    id: defaultCover
+    objectName: "coverBackground"
 
-    CoverBackground {
-        CoverPlaceholder {
-            text: qsTr("Tiny Browser")
-            forceFit: true
-            icon.source: Qt.resolvedUrl("../images/TinyBrowser.svg")
-        }
+    CoverPlaceholder {
+        objectName: "coverPlaceholder"
+        text: appWindow.appName
+        forceFit: true
+        icon.source: Qt.resolvedUrl("../images/TinyBrowser.svg")
     }
 }

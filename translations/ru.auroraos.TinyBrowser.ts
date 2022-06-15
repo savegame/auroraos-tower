@@ -61,28 +61,17 @@
     </message>
 </context>
 <context>
-    <name>DefaultCoverPage</name>
-    <message>
-        <source>Tiny Browser</source>
-        <translation>Tiny Browser</translation>
-    </message>
-</context>
-<context>
     <name>MainPage</name>
     <message>
-        <source>Url</source>
-        <translation>Url</translation>
-    </message>
-    <message>
-        <source>About</source>
-        <translation>About</translation>
+        <source>URL</source>
+        <translation >URL</translation>
     </message>
 </context>
 <context>
-    <name>UrlPage</name>
+    <name>ru.auroraos.TinyBrowser</name>
     <message>
-        <source>Url</source>
-        <translation>Url</translation>
+        <source>Tiny Browser</source>
+        <translation >Tiny Browser</translation>
     </message>
 </context>
 </TS>

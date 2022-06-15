@@ -36,22 +36,19 @@
 **
 ****************************************************************************/
 
-#include <sailfishapp.h>
-
-#include <QtCore/QCoreApplication>
 #include <QtGui/QGuiApplication>
 #include <QtQuick/QQuickView>
+#include <sailfishapp.h>
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication::setOrganizationName("ru.auroraos");
-    QCoreApplication::setApplicationName("TinyBrowser");
+    auto application = SailfishApp::application(argc, argv);
+    application->setOrganizationName("ru.auroraos");
+    application->setApplicationName("TinyBrowser");
 
-    QGuiApplication *app = SailfishApp::application(argc, argv);
-
-    QQuickView *view = SailfishApp::createView();
+    auto view = SailfishApp::createView();
     view->setSource(SailfishApp::pathToMainQml());
     view->show();
 
-    return app->exec();
+    return application->exec();
 }

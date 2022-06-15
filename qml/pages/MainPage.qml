@@ -36,54 +36,106 @@
 **
 ****************************************************************************/
 
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
 import Sailfish.WebView 1.0
 import Sailfish.WebEngine 1.0
 
 Page {
     objectName: "mainPage"
-    allowedOrientations: Orientation.All
 
-    SilicaFlickable {
-        objectName: "mainPageFlickable"
-        anchors.fill: parent
+    WebView {
+        id: webView
 
-        PullDownMenu {
-            objectName: "pullDownMenu"
+        property string _initUrl: "http://www.youtube.com"
 
-            MenuItem {
-                objectName: "menuItemUrl"
-                text: qsTr("Url")
+        objectName: "webView"
+        anchors {
+            top: parent.top
+            left: parent.left
+            right: parent.right
+            bottom: pageFooter.top
+        }
+        url: _initUrl
 
-                onClicked: {
-                    var urlPage = pageStack.push(Qt.resolvedUrl("UrlPage.qml"));
-                    urlPage.urlChanged.connect(function(url) {
-                        webView.url = url;
-                    });
-                    urlPage.urlString = webView.url;
+        Component.onCompleted: {
+            PermissionManager.instance();
+        }
+    }
+
+    Item {
+        id: pageFooter
+
+        objectName: "pageFooter"
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        }
+        height: Math.max(aboutButton.height, urlField.height) + Theme.paddingMedium * 2
+
+        IconButton {
+            id: aboutButton
+
+            objectName: "aboutButton"
+            anchors {
+                left: parent.left
+                verticalCenter: parent.verticalCenter
+            }
+            icon {
+                source: "image://theme/icon-m-about"
+                sourceSize {
+                    width: Theme.iconSizeMedium
+                    height: Theme.iconSizeMedium
                 }
             }
-            MenuItem {
-                objectName: "menuItemAbout"
-                text: qsTr("About")
 
-                onClicked: {
-                    var urlPage = pageStack.push(Qt.resolvedUrl("AboutPage.qml"));
-                }
-            }
-
+            onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
         }
 
-        WebView {
-            id: webView
-            objectName: "webView"
-            anchors.fill: parent
-            url: "http://www.youtube.com"
+        TextField {
+            id: urlField
 
-            Component.onCompleted: {
-                PermissionManager.instance();
+            objectName: "urlField"
+            anchors {
+                left: aboutButton.right
+                right: parent.right
+                verticalCenter: parent.verticalCenter
             }
+            inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhUrlCharactersOnly
+            focusOutBehavior: FocusBehavior.ClearPageFocus
+            labelVisible: false
+            placeholderText: qsTr("URL")
+            text: webView.url
+            textLeftPadding: 0
+            textLeftMargin: 0
+            font {
+                pixelSize: Theme.fontSizeLarge
+                family: Theme.fontFamilyHeading
+            }
+            rightItem: IconButton {
+                objectName: "searchButton"
+                icon.source: "image://theme/icon-m-search"
+                enabled: urlField.text.length > 0
+                opacity: enabled ? 1.0 : 0.0
+
+                onClicked: webView.url = urlField.text;
+
+                Behavior on opacity {
+                    objectName: "behaviorOnOpacity"
+
+                    FadeAnimation {
+                        objectName: "fadeAnimation"
+                    }
+                }
+            }
+
+            onFocusChanged: {
+                if (focus) {
+                    cursorPosition = text.length;
+                }
+            }
+            Component.onCompleted: urlField.text = webView._initUrl
         }
     }
 }

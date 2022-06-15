@@ -36,13 +36,17 @@
 **
 ****************************************************************************/
 
-import QtQuick 2.0
+import QtQuick 2.6
 import Sailfish.Silica 1.0
+import "pages"
 
 ApplicationWindow {
-    objectName: "applicationWindow"
+    id: appWindow
 
-    initialPage: Qt.resolvedUrl("pages/MainPage.qml")
-    cover: Qt.resolvedUrl("cover/DefaultCoverPage.qml")
+    readonly property string appName: qsTr("Tiny Browser")
+
+    objectName: "appWindow"
     allowedOrientations: defaultAllowedOrientations
+    cover: Qt.resolvedUrl("cover/DefaultCoverPage.qml")
+    initialPage: Component { MainPage { } }
 }

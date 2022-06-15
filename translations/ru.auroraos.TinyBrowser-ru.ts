@@ -64,32 +64,19 @@
     </message>
 </context>
 <context>
-    <name>DefaultCoverPage</name>
-    <message>
-        <location filename="../qml/cover/DefaultCoverPage.qml" line="47"/>
-        <source>Tiny Browser</source>
-        <translation>Tiny Browser</translation>
-    </message>
-</context>
-<context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="57"/>
-        <source>Url</source>
-        <translation>Url</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="69"/>
-        <source>About</source>
-        <translation>About</translation>
+        <location filename="../qml/pages/MainPage.qml" line="108"/>
+        <source>URL</source>
+        <translation >URL</translation>
     </message>
 </context>
 <context>
-    <name>UrlPage</name>
+    <name>ru.auroraos.TinyBrowser</name>
     <message>
-        <location filename="../qml/pages/UrlPage.qml" line="62"/>
-        <source>Url</source>
-        <translation>Url</translation>
+        <location filename="../qml/ru.auroraos.TinyBrowser.qml" line="46"/>
+        <source>Tiny Browser</source>
+        <translation >Tiny Browser</translation>
     </message>
 </context>
 </TS>
