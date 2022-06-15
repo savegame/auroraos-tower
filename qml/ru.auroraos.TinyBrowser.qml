@@ -1,9 +1,9 @@
 /****************************************************************************
 **
-** Copyright (C) 2022 Open Mobile Platform LLC.
+** Copyright (C) 2021-2022 Open Mobile Platform LLC.
 ** Contact: https://community.omprussia.ru/open-source
 **
-** This file is part of the TinyBrowser project.
+** This file is part of the Tiny Browser project.
 **
 ** $QT_BEGIN_LICENSE:BSD$
 **
@@ -40,7 +40,7 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 ApplicationWindow {
-    id: applicationWindow
+    objectName: "applicationWindow"
 
     initialPage: Qt.resolvedUrl("pages/MainPage.qml")
     cover: Qt.resolvedUrl("cover/DefaultCoverPage.qml")

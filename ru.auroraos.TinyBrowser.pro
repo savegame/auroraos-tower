@@ -1,9 +1,9 @@
 #############################################################################
 ##
-## Copyright (C) 2022 Open Mobile Platform LLC.
+## Copyright (C) 2021-2022 Open Mobile Platform LLC.
 ## Contact: https://community.omprussia.ru/open-source
 ##
-## This file is part of the TinyBrowser project.
+## This file is part of the Tiny Browser project.
 ##
 ## Redistribution and use in source and binary forms, with or without
 ## modification, are permitted provided that the following conditions are
@@ -34,8 +34,9 @@
 
 TARGET = ru.auroraos.TinyBrowser
 
-CONFIG += link_pkgconfig
-CONFIG += sailfishapp
+CONFIG += \
+          link_pkgconfig \
+          sailfishapp
 
 SOURCES += \
     src/main.cpp
@@ -50,7 +51,7 @@ DISTFILES += \
     rpm/ru.auroraos.TinyBrowser.yaml \
     translations/*.ts \
     ru.auroraos.TinyBrowser.desktop \
-    LICENSE.BSD-3-Clause.md \
+    LICENSE.BSD-3-CLAUSE.md \
     README.md
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172

@@ -1,9 +1,9 @@
 /****************************************************************************
 **
-** Copyright (C) 2022 Open Mobile Platform LLC.
+** Copyright (C) 2021-2022 Open Mobile Platform LLC.
 ** Contact: https://community.omprussia.ru/open-source
 **
-** This file is part of the TinyBrowser project.
+** This file is part of the Tiny Browser project.
 **
 ** $QT_BEGIN_LICENSE:BSD$
 **
@@ -38,11 +38,9 @@
 
 #include <sailfishapp.h>
 
-#include <QCoreApplication>
-#include <QGuiApplication>
-#include <QLocale>
-#include <QQuickView>
-#include <QTranslator>
+#include <QtCore/QCoreApplication>
+#include <QtGui/QGuiApplication>
+#include <QtQuick/QQuickView>
 
 int main(int argc, char *argv[])
 {
@@ -51,7 +49,7 @@ int main(int argc, char *argv[])
 
     QGuiApplication *app = SailfishApp::application(argc, argv);
 
-    QQuickView *view = new QQuickView;
+    QQuickView *view = SailfishApp::createView();
     view->setSource(SailfishApp::pathToMainQml());
     view->show();
 

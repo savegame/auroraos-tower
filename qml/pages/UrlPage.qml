@@ -1,9 +1,9 @@
 /****************************************************************************
 **
-** Copyright (C) 2022 Open Mobile Platform LLC.
+** Copyright (C) 2021-2022 Open Mobile Platform LLC.
 ** Contact: https://community.omprussia.ru/open-source
 **
-** This file is part of the TinyBrowser project.
+** This file is part of the Tiny Browser project.
 **
 ** $QT_BEGIN_LICENSE:BSD$
 **
@@ -40,34 +40,36 @@ import QtQuick 2.0
 import Sailfish.Silica 1.0
 
 Page {
-    id: urlPage
+    property string urlString: ""
+
     objectName: "urlPage"
     allowedOrientations: Orientation.All
-
-    property string urlString: ""
 
     signal urlChanged(var url)
 
     SilicaFlickable {
-        id: urlPageFlickable
         objectName: "urlPageFlickable"
         anchors.fill: parent
+        contentHeight: column.height
 
         Column {
             id: column
+            objectName: "column"
             width: parent.width
 
             PageHeader {
+                objectName: "pageHeader"
                 title: qsTr("Url")
             }
 
             TextField {
-                id: urlField
+                id: url
                 objectName: "urlField"
                 width: parent.width
                 text: urlString
+
                 EnterKey.onClicked: {
-                    var name = urlField.text;
+                    var name = url.text;
                     urlChanged(name);
                     pageStack.pop();
                 }

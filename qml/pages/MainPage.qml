@@ -1,9 +1,9 @@
 /****************************************************************************
 **
-** Copyright (C) 2022 Open Mobile Platform LLC.
+** Copyright (C) 2021-2022 Open Mobile Platform LLC.
 ** Contact: https://community.omprussia.ru/open-source
 **
-** This file is part of the TinyBrowser project.
+** This file is part of the Tiny Browser project.
 **
 ** $QT_BEGIN_LICENSE:BSD$
 **
@@ -42,20 +42,20 @@ import Sailfish.WebView 1.0
 import Sailfish.WebEngine 1.0
 
 Page {
-    id: mainPage
     objectName: "mainPage"
     allowedOrientations: Orientation.All
 
     SilicaFlickable {
-        id: mainPageFlickable
         objectName: "mainPageFlickable"
         anchors.fill: parent
 
         PullDownMenu {
-            id: pullDownMenu
             objectName: "pullDownMenu"
+
             MenuItem {
+                objectName: "menuItemUrl"
                 text: qsTr("Url")
+
                 onClicked: {
                     var urlPage = pageStack.push(Qt.resolvedUrl("UrlPage.qml"));
                     urlPage.urlChanged.connect(function(url) {
@@ -64,6 +64,15 @@ Page {
                     urlPage.urlString = webView.url;
                 }
             }
+            MenuItem {
+                objectName: "menuItemAbout"
+                text: qsTr("About")
+
+                onClicked: {
+                    var urlPage = pageStack.push(Qt.resolvedUrl("AboutPage.qml"));
+                }
+            }
+
         }
 
         WebView {
@@ -73,7 +82,7 @@ Page {
             url: "http://www.youtube.com"
 
             Component.onCompleted: {
-                PermissionManager.instance()
+                PermissionManager.instance();
             }
         }
     }

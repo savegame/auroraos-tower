@@ -16,5 +16,7 @@ For information about contributors see [AUTHORS](AUTHORS.md).
 
 The project has a common structure of an application based on C++ and QML for Aurora OS.
 All the C++ sources files are in [src](src) directory, QML sources are in [qml](qml) directory.
+Ui contains 2 pages. Main page is WebView presentation of open resource.
+Second page is editing of Url string. Second page called from main page by drop down menu.
 
 It is compatible with Aurora OS version 4.
