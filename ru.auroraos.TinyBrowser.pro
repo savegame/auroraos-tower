@@ -48,8 +48,7 @@ SOURCES += \
     src/ru.auroraos.TinyBrowser.cpp
 
 DISTFILES += \
-    qml/images/ru.auroraos.TinyBrowser-red.svg \
-    qml/images/ru.auroraos.TinyBrowser-transp.svg \
+    qml/images/ru.auroraos.TinyBrowser.svg \
     qml/cover/DefaultCoverPage.qml \
     qml/pages/MainPage.qml \
     qml/pages/AboutPage.qml \
