@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Icon=ru.sashikknox.towerjs
+Exec=/usr/bin/ru.sashikknox.towerjs
+Name=TowerJS
+Name[ru]=БашняJS
+
+[X-Sailjail]
+Permissions=WebView;Audio
+OrganizationName=ru.sashikknox
+ApplicationName=TowerJS

@@ -44,82 +44,37 @@ import Sailfish.WebEngine 1.0
 Page {
     objectName: "mainPage"
 
-    WebView {
+    Component {
         id: webView
+        WebView {
+            objectName: "webView"
+            anchors.fill: parent
+            url: Qt.resolvedUrl("file:///usr/share/ru.sashikknox.towerjs/towerjs/index.html")
 
-        property string _initUrl: "http://www.youtube.com"
-
-        objectName: "webView"
-        anchors {
-            top: parent.top
-            left: parent.left
-            right: parent.right
-            bottom: pageFooter.top
-        }
-        url: _initUrl
-
-        Component.onCompleted: {
-            PermissionManager.instance();
+            Component.onCompleted: {
+//                PermissionManager.instance();
+            }
         }
     }
 
-    Item {
-        id: pageFooter
 
-        objectName: "pageFooter"
-        anchors {
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
-        height: Math.max(aboutButton.height, urlField.height) + Theme.paddingMedium * 2
+    Loader {
+        id: pageLoader
+        anchors.fill: parent
 
-        IconButton {
-            id: aboutButton
+        onLoaded: loader.visible = false
+    }
 
-            objectName: "aboutButton"
-            anchors {
-                left: parent.left
-                leftMargin: Theme.paddingMedium
-                verticalCenter: parent.verticalCenter
-            }
-            icon {
-                source: "image://theme/icon-m-about"
-                sourceSize {
-                    width: Theme.iconSizeMedium
-                    height: Theme.iconSizeMedium
-                }
-            }
+    Image {
+        id: loader
 
-            onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
-        }
+        anchors.centerIn: parent
+        width: Theme.iconSizeLarge
+        height: Theme.iconSizeLarge
+        source: Qt.resolvedUrl("../../towerjs/assets/main-loading.gif")
 
-        TextField {
-            id: urlField
-
-            objectName: "urlField"
-            anchors {
-                left: aboutButton.right
-                right: parent.right
-                verticalCenter: parent.verticalCenter
-            }
-            inputMethodHints: Qt.ImhNoPredictiveText | Qt.ImhUrlCharactersOnly
-            focusOutBehavior: FocusBehavior.ClearPageFocus
-            labelVisible: false
-            placeholderText: qsTr("URL")
-            textLeftPadding: 0
-            textLeftMargin: Theme.paddingMedium
-            font {
-                pixelSize: Theme.fontSizeLarge
-                family: Theme.fontFamilyHeading
-            }
-            EnterKey.iconSource: "image://theme/icon-m-search"
-
-            EnterKey.onClicked: {
-                webView.url = text;
-                webView.focus = true;
-            }
-            Component.onCompleted: urlField.text = webView._initUrl
+        Component.onCompleted: {
+            pageLoader.sourceComponent = webView
         }
     }
 }

@@ -61,17 +61,10 @@
     </message>
 </context>
 <context>
-    <name>MainPage</name>
+    <name>ru.sashikknox.towerjs</name>
     <message>
-        <source>URL</source>
-        <translation>URL</translation>
-    </message>
-</context>
-<context>
-    <name>ru.auroraos.TinyBrowser</name>
-    <message>
-        <source>Tiny Browser</source>
-        <translation>Tiny Browser</translation>
+        <source>TowerJS</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

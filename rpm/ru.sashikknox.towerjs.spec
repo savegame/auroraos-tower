@@ -1,6 +1,6 @@
-Name:       ru.auroraos.TinyBrowser
-Summary:    TinyBrowser
-Version:    0.1
+Name:       ru.sashikknox.towerjs
+Summary:    TowerJS
+Version:    0.2
 Release:    1
 Group:      Qt/Qt
 License:    BSD-3-Clause
@@ -18,7 +18,7 @@ BuildRequires:  pkgconfig(Qt5Network)
 BuildRequires:  desktop-file-utils
 
 %description
-The project provides an example of using WebView.
+Build an a tower!
 
 %prep
 %autosetup

@@ -1,0 +1,3 @@
+[submodule "towerjs"]
+	path = towerjs
+	url = https://github.com/iamkun/tower_game.git

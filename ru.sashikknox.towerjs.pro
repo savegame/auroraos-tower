@@ -32,7 +32,7 @@
 ##
 #############################################################################
 
-TARGET = ru.auroraos.TinyBrowser
+TARGET = ru.sashikknox.towerjs
 
 CONFIG += \
     c++14 \
@@ -41,22 +41,32 @@ CONFIG += \
     sailfishapp_i18n
 
 TRANSLATIONS += \
-    translations/ru.auroraos.TinyBrowser.ts \
-    translations/ru.auroraos.TinyBrowser-ru.ts
+    translations/ru.sashikknox.towerjs.ts \
+    translations/ru.sashikknox.towerjs-ru.ts
 
 SOURCES += \
-    src/ru.auroraos.TinyBrowser.cpp
+    src/ru.sashikknox.towerjs.cpp
+
+towerjs.files = $$PWD/towerjs
+towerjs.path = /usr/share/$$TARGET/
+
+INSTALLS += towerjs
 
 DISTFILES += \
-    qml/images/ru.auroraos.TinyBrowser.svg \
+    qml/images/ru.sashikknox.towerjs.svg \
     qml/cover/DefaultCoverPage.qml \
     qml/pages/MainPage.qml \
     qml/pages/AboutPage.qml \
-    qml/ru.auroraos.TinyBrowser.qml \
-    rpm/ru.auroraos.TinyBrowser.spec \
-    rpm/ru.auroraos.TinyBrowser.yaml \
+    qml/ru.sashikknox.towerjs.qml \
+    towerjs/index.js \
+    towerjs/index.html \
+    towerjs/assets/* \
+    towerjs/dist/* \
+    towerjs/src/* \
+    rpm/ru.sashikknox.towerjs.spec \
+    rpm/ru.sashikknox.towerjs.yaml \
     translations/*.ts \
-    ru.auroraos.TinyBrowser.desktop \
+    ru.sashikknox.towerjs.desktop \
     LICENSE.BSD-3-CLAUSE.md \
     CODE_OF_CONDUCT.md \
     CONTRIBUTING.md \

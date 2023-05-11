@@ -43,7 +43,7 @@ import "pages"
 ApplicationWindow {
     id: appWindow
 
-    readonly property string appName: qsTr("Tiny Browser")
+    readonly property string appName: qsTr("TowerJS")
 
     objectName: "appWindow"
     allowedOrientations: defaultAllowedOrientations

@@ -64,19 +64,11 @@
     </message>
 </context>
 <context>
-    <name>MainPage</name>
+    <name>ru.sashikknox.towerjs</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="109"/>
-        <source>URL</source>
-        <translation>URL</translation>
-    </message>
-</context>
-<context>
-    <name>ru.auroraos.TinyBrowser</name>
-    <message>
-        <location filename="../qml/ru.auroraos.TinyBrowser.qml" line="46"/>
-        <source>Tiny Browser</source>
-        <translation>Tiny Browser</translation>
+        <location filename="../qml/ru.sashikknox.towerjs.qml" line="46"/>
+        <source>TowerJS</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
